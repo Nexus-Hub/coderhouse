@@ -1,7 +1,7 @@
 //Variable Auxiliar, se usa para el número de operaciones para el prompt() y el console.log() y mantener el primer index en 0.
 let auxCantOperaciones = 1
 
-//Tipos de cambio.
+//Tipos de cambio. 
 let ARS = 380
 let BTC = 0.000044
 
