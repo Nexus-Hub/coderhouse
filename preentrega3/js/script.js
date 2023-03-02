@@ -205,3 +205,19 @@ function calcularTotal(carrito) {
     }
 }
 
+const btnPagar = document.getElementById("botonPagar");
+btnPagar.addEventListener('click', () => {
+    let total = document.getElementById("carritoTotal").innerText;
+    if (total == "" || (total.indexOf("Total: 0.00 ARS") != -1) || (total.indexOf("Total: 0.00 USD") != -1)) {
+        return
+    }
+    document.body.innerHTML = `<h1>Carlos Duarte Medina - PreEntrega 3</h1>
+                                   <h2>Coderhouse - JS39415</h2>
+                                   <br>
+                                   <h2> Gracias por su compra! </h2>
+                                   <div class="text-center">
+                                   <a href="index.html">Volver a la tienda</a>
+                                   </div>`
+    localStorage.clear();
+}
+)

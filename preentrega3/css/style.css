@@ -18,6 +18,10 @@
        font-size:20px;
      }
 
+     .body{
+      background-color: white
+     }
+
      #carrito{
         width: 30%; 
         background-color: black; 
