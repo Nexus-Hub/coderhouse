@@ -81,7 +81,9 @@ for (const boton of btnCompra) {
 
 function agregarCarrito(e) {
     const id = e.target.getAttribute("id");
+    //Chequeo si el producto existe
     const productoSeleccionado = productos.find((producto) => producto.id === parseInt(id));
+    //Chequeo si el producto ya está en el carrito
     const productoExistente = carrito.find((producto) => producto.id === productoSeleccionado.id);
     //Si el stock está en 0 no agrega el producto al carrito
     if (productoSeleccionado.stock === 0) {
@@ -181,6 +183,7 @@ moneda.addEventListener("change", (e) => {
 
 // Calcular el total del Carrito
 function calcularTotal(carrito) {
+    //ARS
     if (monedaValue == 1) {
         const carritoTotal = document.getElementById("carritoTotal");
         const totalCarritoARS = carrito.reduce((previous, current) => previous + (current.cantidad * current.precioARS), 0);
@@ -190,6 +193,7 @@ function calcularTotal(carrito) {
                               IVA (21%): ${iva.toFixed(2)} ${monedaText} <br>
                               Total: ${total.toFixed(2)} ${monedaText}`
     }
+    //USD
     if (monedaValue == 2) {
         const carritoTotal = document.getElementById("carritoTotal");
         const totalCarritoARS = carrito.reduce((previous, current) => previous + (current.cantidad * current.precioARS), 0);
@@ -205,12 +209,16 @@ function calcularTotal(carrito) {
     }
 }
 
+//Boton de Pagar
+
 const btnPagar = document.getElementById("botonPagar");
 btnPagar.addEventListener('click', () => {
     let total = document.getElementById("carritoTotal").innerText;
+    //Si el carrito está en blanco, o el total es igual a 0 no hace nada
     if (total == "" || (total.indexOf("Total: 0.00 ARS") != -1) || (total.indexOf("Total: 0.00 USD") != -1)) {
         return
     }
+    //Si hay total a pagar el boton procede a hacer esto:
     document.body.innerHTML = `<h1>Carlos Duarte Medina - PreEntrega 3</h1>
                                    <h2>Coderhouse - JS39415</h2>
                                    <br>
