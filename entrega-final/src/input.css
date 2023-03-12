@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primary-color{
+    @apply bg-pink-200
+}
+
+.bg-secondary-color{
+    @apply bg-pink-300
+}
+
+.fill-primary-color{
+    @apply fill-pink-200
+}
+
+.fill-secondary-color{
+    @apply fill-pink-300
+}
+
+.text-primary-color{
+    @apply text-pink-400
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggical</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/backgrounds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+    <div class=>
+        <div>
+            <div>
+                <nav
+                    class="fixed nav-bar flex items-center justify-between flex-wrap crossBackground p-2 w-full border-b-2 border-black border-opacity-20">
+                    <!-- COMIENZO DEL NAV -->
+                    <div class="flex items-center flex-shrink-0 text-black-200 mr-6">
+                        <h1 class="font-semibold text-xl tracking-tight text-primary-color">Maggical</h1>
+                    </div>
+                    <div class="block lg:hidden">
+                        <button id='navButton'
+                            class="flex items-center px-3 py-2 border rounded text-black-200 border-black hover:text-primary-color hover:border-white">
+                            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <title>Menu</title>
+                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id='menu' class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden">
+                        <!--COMIENZO DEL MENU -->
+                        <div class="text-sm lg:flex-grow">
+                            <a href="#"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:underline underline-offset-8 mr-4">
+                                Abuelos
+                            </a>
+                            <a href="#"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:underline underline-offset-8 mr-4">
+                                Diseños Divertidos
+                            </a>
+                            <a href="#"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:underline underline-offset-8 mr-4">
+                                Halloween
+                            </a>
+                            <a href="#"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:underline underline-offset-8 mr-4">
+                                Lo más nuevo
+                            </a>
+                            <a href="#"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:underline underline-offset-8 mr-4">
+                                Recíen Nacidos
+                            </a>
+                            <a href="#"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:underline underline-offset-8 mr-4">
+                                Tazas
+                            </a>
+                        </div>
+                        <div id="mostrarCarrito">
+                            <svg class="fill-secondary-color hover:fill-pink-700 w-10 mr-4 inline-block cursor-pointer"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                                stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round"
+                                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <a href="#"
+                                class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-primary-color hover:bg-white mr-4 mt-4 lg:mt-0">Log
+                                In</a>
+                        </div>
+                        <div>
+                            <a href="#"
+                                class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-primary-color hover:bg-white mt-4 lg:mt-0">Sign
+                                Up</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div> <!-- FIN DEL NAV -->
+        <div>
+            <br>
+            <br>
+        </div>
+        <div>
+            <h2 class="text-3xl text-center py-6 pb-6">
+                Maggical, ropa para bebé, remeras personalizadas a tu gusto
+            </h2>
+        </div>
+
+        <div> <!-- COMIENZO DE LOS PRODUCTOS -->
+
+            <div id='catalogoDeProductos'
+                class="grid grid-cols-2 grid-flow-row gap-y-6 gap-x-6 auto-rows-auto max-w-screen-2xl ml-auto mr-auto 2xl:grid-cols-4">
+
+            </div> <!-- FIN DE LOS PRODUCTOS -->
+
+
+            <div class="relative"> <!-- INICIO DE CARRITO -->
+                <div id="carrito"
+                    class="block fixed text-center bottom-3 right-3 crossBackground text-black w-1/3 h-5/6 animate__animated animate__fadeIn rounded-xl overflow-auto border-2 border-black border-opacity-20"
+                    style="display: none;">
+                    <div>
+                        <div>
+                            <svg class="fill-secondary-color w-10 inline-block" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                                className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round"
+                                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 text-sm font-semibold tracking-wide">
+                        <label>
+                            Selecciona tu moneda:
+                            <select name="monedas" id="moneda" class="text-black">
+                                <option value="1">ARS</option>
+                                <option value="2">USD</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="overflow-auto rounded-lg shadow-md">
+                        <table class="w-full bg-gray-50 border-gray-200 mt-4">
+                            <thead class="bg-gray-50 border-b-2 border-gray-200">
+                                <tr>
+                                    <td class="w-20 p-3 text-sm font-semibold tracking-wide text-center"></td>
+                                    <td class="w-25 p-3 text-sm font-semibold tracking-wide text-left">Nombre del
+                                        Producto</td>
+                                    <td class="w-20 p-3 text-sm font-semibold tracking-wide text-center">Cantidad</td>
+                                    <td class="w-20 p-3 text-sm font-semibold tracking-wide text-center">Precio</td>
+                                    <td class="w-20 p-3 text-sm font-semibold tracking-wide text-center"></td>
+                                </tr>
+                            </thead>
+
+                            <tbody id="tbody" class="divide-y divide-gray-100">
+                                <!-- Aqui van las filas del carrito generadas por script.js -->
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div id="carritoTotal" class="font-semibold tracking-wide mt-4">
+                        <!-- Aqui va el total del carrito generado por script.js -->
+                    </div>
+
+                    <div>
+                        <button id="botonPagar"
+                            class="bg-primary-color hover:bg-pink-300 text-black  font-bold py-2 px-4 rounded-full mt-4 mb-4">Pagar</button>
+                    </div>
+
+                    <div id="mostrarCarritoDos">
+                        <svg class="w-10 bg-primary-color hover:bg-pink-300 text-black font-bold rounded-full cursor-pointer absolute top-2 right-2"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                            stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+
+                    <div id="rateARS"
+                        class="bg-gray-200 text-black text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-4 mt-4 opacity-70">
+                    </div>
+
+                </div>
+            </div><!-- FIN DE CARRITO -->
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="p-4 bg-white sm:p-6 mt-4 crossBackground border-t-2 border-black border-opacity-20">
+        <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">Maggical</span><br>
+                <span>Carlos Duarte Medina - Entrega Final</span><br>
+                <span>Coderhouse - JS39415</span>
+
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
+                <ul>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Política de Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Términos &amp; Condiciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <hr class="my-6 border-gray-500 sm:mx-auto lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm sm:text-center">© 2023 <a href="#" class="hover:underline">Maggical™</a>. Todos los
+                derechos reservados.</span>
+            <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                <a href="#">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only">Instagram page</span>
+                </a>
+
+                <a href="#">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only">Facebook page</span>
+                </a>
+
+                <a href="#">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                    <span class="sr-only">Twitter page</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/script.js" type="module"></script>
+    <script src="./js/exchange.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
