@@ -84,14 +84,23 @@ for (const producto of productos) {
     </div>
     </div>
     `
-
-
-
-
-
-
-
     catalogoDeProductos.append(fila);
+}
+
+function toastifyProductoAgregado() { 
+
+    Toastify({
+        text: "✓ Producto agregado",
+        duration: 500,
+        gravity: "bottom",
+        position: "center",
+        style: {
+            fontSize: "24px",
+            color: "black",
+            background: "pink"
+        }
+    }).showToast();
+    
 }
 
 //Boton Comprar
@@ -100,23 +109,7 @@ for (const boton of btnCompra) {
 
     boton.addEventListener("click", agregarCarrito);
 
-    boton.addEventListener("click", function () {
-
-        Toastify({
-            text: "✓ Producto agregado",
-            duration: 500,
-            gravity: "bottom",
-            position: "center",
-            style: {
-                fontSize: "24px",
-                color: "black",
-                background: "pink"
-            }
-        }).showToast();
-    });
-
 }
-
 
 function agregarCarrito(e) {
     const id = e.target.getAttribute("id");
@@ -146,9 +139,13 @@ function agregarCarrito(e) {
     //Si hay suficiente stock agrega al carrito
     if (productoExistente && productoExistente.cantidad < productoExistente.stock) {
         productoExistente.cantidad++
+        toastifyProductoAgregado()
+
+        
     }
     if (!productoExistente) {
         productoSeleccionado.cantidad++
+        toastifyProductoAgregado()
         mostrarCarrito(productoSeleccionado);
         carrito.push(productoSeleccionado);
     } else {
