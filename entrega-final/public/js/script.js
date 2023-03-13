@@ -9,13 +9,14 @@ let monedaText = "ARS"
 
 // Class y métodos
 class Producto {
-    constructor(nombre, precioARS, stock, id, cantidad, categoria, descripcion) {
+    constructor(nombre, precioARS, stock, id, cantidad, categoria, img1, descripcion) {
         this.nombre = nombre;
         this.precioARS = precioARS;
         this.stock = stock;
         this.id = id;
         this.cantidad = cantidad; // Cantidad en Carrito por default
         this.categoria = categoria
+        this.img1 = img1
         this.descripcion = descripcion
         this.precioUSD = (precioARS / rateARS);
     }
@@ -25,26 +26,30 @@ class Producto {
 let productos = [];
 
 // Productos ingresados al sistema por el administrador //
-//(nombre, precioARS, stock, id, cantidad en carrito por default, descripción)
-productos.push(new Producto("Abuelitos Nos Vemos Pronto", 4000, 2, 1, 0, "Abuelos", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("El Rey", 2500, 3, 2, 0, "Lo más nuevo", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Grandma was here", 7000, 4, 3, 0, "Abuelos", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Hola Abuela y Abuelo", 350, 0, 4, 0, "Abuelos", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Hola Mundo", 3500, 4, 5, 0, "Lo más nuevo", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Milk Monster", 3700, 3, 6, 0, "Halloween", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Soy Capitán Bebé", 9000, 7, 7, 0, "Lo más nuevo", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Soy La Princesa", 700, 3, 8, 0, "Lo más nuevo", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Cute Like Mommy Smelly Like Daddy", 1700, 2, 9, 0, "Divertidos", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Emma", 3500, 7, 10, 0, "Lo más nuevo", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Grandma a mom without rules", 325, 1, 11, 0, "Abuelos", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("I am mamas boo", 6900, 9, 12, 0, "Divertidos", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("My First Halloween", 11700, 0, 13, 0, "Halloween", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("The Dark Side", 5700, 6, 14, 0, "Divertidos", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Promoted To...", 700, 10, 15, 0, "Tazas", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Hello World", 1200, 6, 16, 0, "Recién Nacidos", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("Recién Horneado", 1500, 9, 17, 0, "Recién Nacidos", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 
-productos = productos.sort((a, b) => (a.categoria > b.categoria) ? 1 : ((b.categoria > a.categoria) ? -1 : 0)) // Sort by category A-Z
+productos.push(new Producto("LAPTOP HYUNDAI CELERON N4020 HYBOOK", 126000, 7, 1, 0, "Laptops", "Laptop-hyundai.jpeg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP ACER CELERON N4020 TRAVELMATE B3", 77700, 3, 2, 0, "Laptops", "Laptop-acer.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP TECLAST CORE I3 1005G1 TB04 F15 PRO", 145800, 0, 3, 0, "Laptops", "Laptop-tbolt.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP HP CELERON N4000 STREAM 11 PRO G5", 81000, 2, 4, 0, "Laptops", "Laptop-hp.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+
+productos.push(new Producto("PROCESADOR INTEL CORE I9 12900K 3.2GHZ - 30MB | 1700 | S/COOLER", 227880, 3, 5, 0, "Procesadores", "CPU-I9-12900K.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PROCESADOR AMD RYZEN 7 4750G 3.6GHZ, 8MB, 8 NUCLEOS, RADEON GRAPHICS, OEM C/COOLER", 93600, 7, 6, 0, "Procesadores", "CPU-I9-12900K.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+
+productos.push(new Producto("PC INTEL I7 11700F B560M TRX 3060/12GB DDR4 16GB(2X8)/3200 SSD KINGSTON 500GB HDD SEAGATE 2TB", 506520, 2, 7, 0, "Desktop", "Desktop-i7-11700f.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PC AMD 3PRO 4350G A520M-HVS DDR4 8GB/2666 SSD 480GB", 146700, 0, 8, 0, "Desktop", "Desktop-ryzen-3.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+
+productos.push(new Producto("TARJETA DE VIDEO MSI VENTUS 3X OC RTX 4080 16GB GDDR6X GEFORCE NVIDIA 256 BITS", 523800, 3, 9, 0, "Tarjetas de Video", "GPU-RTX-4080.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TARJETA DE VIDEO GALAX SG RTX 3090 OC 24GB GDDR6X GEFORCE NVIDIA 384 BITS", 814680, 2, 10, 0, "Tarjetas de Video", "GPU-RTX-3090.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TARJETA DE VIDEO GIGABYTE RADEON XTREME WATERFORCE RX 6900 XT,16GB GDDR6 256 BITS", 953640, 3, 11, 0, "Tarjetas de Video", "GPU-Radeon-RX-6900-XT.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+
+productos.push(new Producto("TECLADO LOGITECH GAMING MECANICO G413", 27360, 3, 12, 0, "Teclados", "teclado-logitech-g413.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TECLADO GENIUS ALAMBRICO KB-117", 3420, 3, 13, 0, "Teclados", "teclado-genius.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+
+productos.push(new Producto("MOUSE LOGITECH M110, SENSOR HASTA 1000 DPI", 2880, 3, 14, 0, "Mouse", "mouse-logitech.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("MOUSE LOGITECH G403 HERO GAMING, SENSOR HASTA 16000 DPI", 18360, 3, 15, 0, "Mouse", "mouse-logitech-g403.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+
+// Sortear render de los productos en la pagina principal por categoria A-Z
+productos = productos.sort((a, b) => (a.categoria > b.categoria) ? 1 : ((b.categoria > a.categoria) ? -1 : 0))
 
 // Array del carrito
 let carrito = [];
@@ -66,8 +71,8 @@ for (const producto of productos) {
     const fila = document.createElement("div");
     fila.classList.add("px-2", "max-w-sm", "rounded", "overflow-hidden", "shadow-lg");
     fila.innerHTML =
-        `
-    <img class="p-1 w-full" src="./img/${producto.nombre}.png" alt="${producto.nombre}">
+    `
+    <img class="p-1 w-full" src="./img/${producto.img1}" alt="${producto.nombre}">
     <div class="px-6 py-4"">
     <div class="font-bold text-xl mb-2">${producto.nombre}</div>
     <p class="text-gray-700 text-base">
@@ -78,7 +83,7 @@ for (const producto of productos) {
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Stock: ${producto.stock}</span>
     <span class="inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#${producto.categoria}</span><br>
     <span class="inline-block text-2xl font-semibold pb-2">${producto.precioARS} ARS</span><br>
-    <button id="${producto.id}" class="inline-block bg-pink-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 botonCompra hover:bg-pink-300">
+    <button id="${producto.id}" class="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 botonCompra hover:bg-green-300">
     Agregar al carrito
     </button>
     </div>
@@ -97,7 +102,7 @@ function toastifyProductoAgregado() {
         style: {
             fontSize: "24px",
             color: "black",
-            background: "pink"
+            background: "green"
         }
     }).showToast();
     
@@ -179,7 +184,7 @@ function mostrarCarrito(producto) {
     //Imagen del producto (basado en el nombre del producto)
     const td1 = document.createElement("td");
     const img = document.createElement("img");
-    img.src = `./img/${producto.nombre}.png`
+    img.src = `./img/${producto.img1}`
     img.classList.add("w-20", "p-2")
     td1.appendChild(img);
 
@@ -211,7 +216,7 @@ function mostrarCarrito(producto) {
     <path strokeLinecap="round" strokeLinejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
     </svg>
     `
-    button.classList.add("bg-primary-color", "hover:bg-pink-300", "text-black", "font-bold", "py-2", "px-4", "rounded-full");
+    button.classList.add("bg-primary-color", "hover:bg-green-300", "text-black", "font-bold", "py-2", "px-4", "rounded-full");
     button.addEventListener("click", borrarProducto);
     td5.appendChild(button);
 

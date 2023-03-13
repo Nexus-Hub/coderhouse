@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 .bg-primary-color{
-    @apply bg-pink-200
+    @apply bg-green-200
 }
 
 .bg-secondary-color{
-    @apply bg-pink-300
+    @apply bg-green-300
 }
 
 .fill-primary-color{
-    @apply fill-pink-200
+    @apply fill-green-200
 }
 
 .fill-secondary-color{
-    @apply fill-pink-300
+    @apply fill-green-300
 }
 
 .text-primary-color{
-    @apply text-pink-400
+    @apply text-green-400
 }
