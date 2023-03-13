@@ -27,26 +27,26 @@ let productos = [];
 
 // Productos ingresados al sistema por el administrador //
 
-productos.push(new Producto("LAPTOP HYUNDAI CELERON N4020 HYBOOK", 126000, 7, 1, 0, "Laptops", "Laptop-hyundai.jpeg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("LAPTOP ACER CELERON N4020 TRAVELMATE B3", 77700, 3, 2, 0, "Laptops", "Laptop-acer.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("LAPTOP TECLAST CORE I3 1005G1 TB04 F15 PRO", 145800, 0, 3, 0, "Laptops", "Laptop-tbolt.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("LAPTOP HP CELERON N4000 STREAM 11 PRO G5", 81000, 2, 4, 0, "Laptops", "Laptop-hp.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP HYUNDAI CELERON N4020 HYBOOK", 126000, 7, 1, 0, "Laptops", "Laptop-hyundai.jpeg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP ACER CELERON N4020 TRAVELMATE B3", 77700, 3, 2, 0, "Laptops", "Laptop-acer.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP TECLAST CORE I3 1005G1 TB04 F15 PRO", 145800, 0, 3, 0, "Laptops", "Laptop-tbolt.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP HP CELERON N4000 STREAM 11 PRO G5", 81000, 2, 4, 0, "Laptops", "Laptop-hp.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 
-productos.push(new Producto("PROCESADOR INTEL CORE I9 12900K 3.2GHZ - 30MB | 1700 | S/COOLER", 227880, 3, 5, 0, "Procesadores", "CPU-I9-12900K.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("PROCESADOR AMD RYZEN 7 4750G 3.6GHZ, 8MB, 8 NUCLEOS, RADEON GRAPHICS, OEM C/COOLER", 93600, 7, 6, 0, "Procesadores", "CPU-I9-12900K.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PROCESADOR INTEL CORE I9 12900K 3.2GHZ - 30MB | 1700 | S/COOLER", 227880, 3, 5, 0, "Procesadores", "CPU-I9-12900K.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PROCESADOR AMD RYZEN 7 4750G 3.6GHZ, 8MB, 8 NUCLEOS, RADEON GRAPHICS, OEM C/COOLER", 93600, 7, 6, 0, "Procesadores", "CPU-I9-12900K.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 
-productos.push(new Producto("PC INTEL I7 11700F B560M TRX 3060/12GB DDR4 16GB(2X8)/3200 SSD KINGSTON 500GB HDD SEAGATE 2TB", 506520, 2, 7, 0, "Desktop", "Desktop-i7-11700f.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("PC AMD 3PRO 4350G A520M-HVS DDR4 8GB/2666 SSD 480GB", 146700, 0, 8, 0, "Desktop", "Desktop-ryzen-3.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PC INTEL I7 11700F B560M TRX 3060/12GB DDR4 16GB(2X8)/3200 SSD KINGSTON 500GB HDD SEAGATE 2TB", 506520, 2, 7, 0, "Desktop", "Desktop-i7-11700f.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PC AMD 3PRO 4350G A520M-HVS DDR4 8GB/2666 SSD 480GB", 146700, 0, 8, 0, "Desktop", "Desktop-ryzen-3.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 
-productos.push(new Producto("TARJETA DE VIDEO MSI VENTUS 3X OC RTX 4080 16GB GDDR6X GEFORCE NVIDIA 256 BITS", 523800, 3, 9, 0, "Tarjetas de Video", "GPU-RTX-4080.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("TARJETA DE VIDEO GALAX SG RTX 3090 OC 24GB GDDR6X GEFORCE NVIDIA 384 BITS", 814680, 2, 10, 0, "Tarjetas de Video", "GPU-RTX-3090.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("TARJETA DE VIDEO GIGABYTE RADEON XTREME WATERFORCE RX 6900 XT,16GB GDDR6 256 BITS", 953640, 3, 11, 0, "Tarjetas de Video", "GPU-Radeon-RX-6900-XT.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TARJETA DE VIDEO MSI VENTUS 3X OC RTX 4080 16GB GDDR6X GEFORCE NVIDIA 256 BITS", 523800, 3, 9, 0, "Tarjetas de Video", "GPU-RTX-4080.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TARJETA DE VIDEO GALAX SG RTX 3090 OC 24GB GDDR6X GEFORCE NVIDIA 384 BITS", 814680, 2, 10, 0, "Tarjetas de Video", "GPU-RTX-3090.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TARJETA DE VIDEO GIGABYTE RADEON XTREME WATERFORCE RX 6900 XT,16GB GDDR6 256 BITS", 953640, 3, 11, 0, "Tarjetas de Video", "GPU-Radeon-RX-6900-XT.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 
-productos.push(new Producto("TECLADO LOGITECH GAMING MECANICO G413", 27360, 3, 12, 0, "Teclados", "teclado-logitech-g413.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("TECLADO GENIUS ALAMBRICO KB-117", 3420, 3, 13, 0, "Teclados", "teclado-genius.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TECLADO LOGITECH GAMING MECANICO G413", 27360, 3, 12, 0, "Teclados", "teclado-logitech-g413.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TECLADO GENIUS ALAMBRICO KB-117", 3420, 3, 13, 0, "Teclados", "teclado-genius.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 
-productos.push(new Producto("MOUSE LOGITECH M110, SENSOR HASTA 1000 DPI", 2880, 3, 14, 0, "Mouse", "mouse-logitech.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("MOUSE LOGITECH G403 HERO GAMING, SENSOR HASTA 16000 DPI", 18360, 3, 15, 0, "Mouse", "mouse-logitech-g403.jpg","Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("MOUSE LOGITECH M110, SENSOR HASTA 1000 DPI", 2880, 3, 14, 0, "Mouse", "mouse-logitech.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("MOUSE LOGITECH G403 HERO GAMING, SENSOR HASTA 16000 DPI", 18360, 3, 15, 0, "Mouse", "mouse-logitech-g403.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 
 // Sortear render de los productos en la pagina principal por categoria A-Z
 productos = productos.sort((a, b) => (a.categoria > b.categoria) ? 1 : ((b.categoria > a.categoria) ? -1 : 0))
@@ -67,32 +67,39 @@ if (carritoStorage) {
 //Render de las cards de productos en el HTML
 const catalogoDeProductos = document.getElementById("catalogoDeProductos");
 
-for (const producto of productos) {
-    const fila = document.createElement("div");
-    fila.classList.add("px-2", "max-w-sm", "rounded", "overflow-hidden", "shadow-lg");
-    fila.innerHTML =
-    `
-    <img class="p-1 w-full" src="./img/${producto.img1}" alt="${producto.nombre}">
-    <div class="px-6 py-4"">
-    <div class="font-bold text-xl mb-2">${producto.nombre}</div>
-    <p class="text-gray-700 text-base">
-    ${producto.descripcion}
-    </p>
-    </div>
-    <div class="px-6 pt-4 pb-2">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Stock: ${producto.stock}</span>
-    <span class="inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#${producto.categoria}</span><br>
-    <span class="inline-block text-2xl font-semibold pb-2">${producto.precioARS} ARS</span><br>
-    <button id="${producto.id}" class="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 botonCompra hover:bg-green-300">
-    Agregar al carrito
-    </button>
-    </div>
-    </div>
-    `
-    catalogoDeProductos.append(fila);
+function renderizarProductos(productos) {
+    catalogoDeProductos.innerHTML = ``
+    for (const producto of productos) {
+        const fila = document.createElement("div");
+        fila.classList.add("px-2", "max-w-sm", "rounded", "overflow-hidden", "shadow-lg");
+        fila.innerHTML =
+            `
+        <img class="p-1 w-full" src="./img/${producto.img1}" alt="${producto.nombre}">
+        <div class="px-6 py-4"">
+        <div class="font-bold text-xl mb-2">${producto.nombre}</div>
+        <p class="text-gray-700 text-base">
+        ${producto.descripcion}
+        </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Stock: ${producto.stock}</span>
+        <span class="inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#${producto.categoria}</span><br>
+        <span class="inline-block text-2xl font-semibold pb-2">${producto.precioARS} ARS</span><br>
+        <button id="${producto.id}" class="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 botonCompra hover:bg-green-300">
+        Agregar al carrito
+        </button>
+        </div>
+        </div>
+        `
+        catalogoDeProductos.append(fila);
+    }
+    botonComprar()
 }
 
-function toastifyProductoAgregado() { 
+renderizarProductos(productos)
+
+
+function toastifyProductoAgregado() {
 
     Toastify({
         text: "✓ Producto agregado",
@@ -105,15 +112,18 @@ function toastifyProductoAgregado() {
             background: "green"
         }
     }).showToast();
-    
+
 }
 
 //Boton Comprar
-const btnCompra = document.querySelectorAll(".botonCompra");
-for (const boton of btnCompra) {
-
-    boton.addEventListener("click", agregarCarrito);
-
+function botonComprar() {
+    
+    const btnCompra = document.querySelectorAll(".botonCompra");
+    for (const boton of btnCompra) {
+    
+        boton.addEventListener("click", agregarCarrito);
+    
+    }
 }
 
 function agregarCarrito(e) {
@@ -146,7 +156,7 @@ function agregarCarrito(e) {
         productoExistente.cantidad++
         toastifyProductoAgregado()
 
-        
+
     }
     if (!productoExistente) {
         productoSeleccionado.cantidad++
@@ -287,8 +297,8 @@ btnPagar.addEventListener('click', () => {
         return
     }
     //Si hay total a pagar el boton procede a hacer esto:
-    document.body.innerHTML = 
-    `
+    document.body.innerHTML =
+        `
     <div class="text-center">
     <h1>Carlos Duarte Medina - Entrega Final</h1>
     <h2>Coderhouse - JS39415</h2><br>
@@ -299,5 +309,18 @@ btnPagar.addEventListener('click', () => {
     </div>
     `
     localStorage.clear();
+});
+
+//Filtrar por categorias
+
+const menuItems = document.getElementsByClassName('menuItem')
+
+for (const menuItem of menuItems) {
+
+    menuItem.addEventListener("click", (e) => {
+        let categoria = productos.filter((producto) => producto.categoria === e.target.innerText)
+        renderizarProductos(categoria)
+    });
 }
-)
+
+

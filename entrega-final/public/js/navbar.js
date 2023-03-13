@@ -4,7 +4,7 @@ const btnCarrito = document.getElementById("mostrarCarrito");
 const btnCarritoDos = document.getElementById("mostrarCarritoDos");
 
 //Boton Mostrar/Ocultar Nav Bar en Mobile
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
     menu.classList.toggle('hidden')
 })
 
@@ -28,3 +28,4 @@ btnCarritoDos.addEventListener("click", function () {
         carrito.style.display = "block";
     }
 })
+
