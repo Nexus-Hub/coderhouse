@@ -97,8 +97,8 @@ function renderizarProductos(productos) {
 }
 
 //Inicialización de la página
-renderizarProductos(productos)
-totalProductosCarrito()
+renderizarProductos(productos);
+totalProductosCarrito();
 
 function toastifyProductoAgregado() {
 
@@ -188,7 +188,7 @@ function mostrarCarrito(producto) {
 
     //Creación de la fila
     const fila = document.createElement("tr");
-    fila.id = `fila-${producto.id}`
+    fila.id = `id-${producto.id}`
     fila.classList.add("hover:bg-gray-200")
 
     //Imagen del producto (basado en el nombre del producto)
@@ -237,33 +237,33 @@ function mostrarCarrito(producto) {
     fila.appendChild(td4);
     fila.appendChild(td5);
     tabla.append(fila);
-    
     totalProductosCarrito();
+    
 }
 
 function totalProductosCarrito() {
     const tabla = document.getElementById("tbody");
+    let totalRows = tabla.rows.length
     const totalProductosCarrito = document.getElementById("totalProductosCarrito");
-    let total = tabla.rows.length
     totalProductosCarrito.innerHTML =
     `
-    <span class="font-bold text-xl">[${total}]</span>
-    `    
+    <span class="font-bold text-xl">[${totalRows}]</span>
+    `
 }
 
 //Borrar Producto del Carrito
-function borrarProducto(evento) {
-    const id = evento.target.getAttribute("id").replace("borrar-", "");
-    const fila = document.getElementById(`fila-${id}`);    
+function borrarProducto(e) {
+    const id = e.target.getAttribute("id")?.replace("borrar-", "");
+    const fila = document.getElementById(`id-${id}`);    
     if (fila) {
         carrito = carrito.filter((producto) => producto.id !== parseInt(id));
         fila.remove();
         localStorage.setItem("carrito", JSON.stringify(carrito));
-        calcularTotal(carrito);
-        totalProductosCarrito();
+        calcularTotal(carrito);        
         const productoSeleccionado = productos.find((producto) => producto.id === parseInt(id));
         if (productoSeleccionado) {
             productoSeleccionado.cantidad = 0
+            totalProductosCarrito();
         }
     }
 }
