@@ -68,7 +68,7 @@ function renderizarProductos(productos) {
         fila.classList.add("px-2", "max-w-sm", "rounded", "overflow-hidden", "shadow-lg");
         fila.innerHTML =
             `
-        <img class="p-1 w-full" src="./img/${producto.img1}" alt="${producto.nombre}">
+        <img class="p-1 w-full" src="./img/productos/${producto.img1}" alt="${producto.nombre}">
         <div class="px-6 py-4"">
         <div class="font-bold text-xl mb-2">${producto.nombre}</div>
         <p class="text-gray-700 text-base">
@@ -183,7 +183,7 @@ function mostrarCarrito(producto) {
     //Imagen del producto (basado en el nombre del producto)
     const td1 = document.createElement("td");
     const img = document.createElement("img");
-    img.src = `./img/${producto.img1}`
+    img.src = `./img/productos/${producto.img1}`
     img.classList.add("w-20", "p-2")
     td1.appendChild(img);
 
