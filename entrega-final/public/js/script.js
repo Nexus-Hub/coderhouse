@@ -356,7 +356,7 @@ function borrarTodosLosProductos() {
 //Alerta Sweet Alert 2 de cuando se quiere borrar todo del carrito
 async function swalBorrarTodo() {
     const resultado = await Swal.fire({
-        text: "Seguro que quiere limpiar todos los productos del carrito?",
+        text: "Seguro que quiere borrar todos los productos del carrito?",
         icon: "warning",
         showDenyButton: true,
         confirmButtonColor: '#087325',
