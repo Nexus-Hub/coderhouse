@@ -7,7 +7,7 @@ let rateARS = await convertFiatToFiat(1, "USD", "ARS");
 let monedaValue = 1
 let monedaText = "ARS"
 
-// Class y métodos
+//Class y métodos
 class Producto {
     constructor(nombre, precioARS, stock, id, cantidad, categoria, img1, descripcion) {
         this.nombre = nombre;
@@ -22,39 +22,34 @@ class Producto {
     }
 }
 
-// Array de los productos disponibles en la tienda
+//Array de los productos disponibles en la tienda
 let productos = [];
 
-// Productos ingresados al sistema por el administrador //
+//Productos ingresados al sistema por el administrador
 
 productos.push(new Producto("LAPTOP HYUNDAI CELERON N4020 HYBOOK", 126000, 7, 1, 0, "Laptops", "Laptop-hyundai.jpeg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 productos.push(new Producto("LAPTOP ACER CELERON N4020 TRAVELMATE B3", 77700, 3, 2, 0, "Laptops", "Laptop-acer.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 productos.push(new Producto("LAPTOP TECLAST CORE I3 1005G1 TB04 F15 PRO", 145800, 0, 3, 0, "Laptops", "Laptop-tbolt.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 productos.push(new Producto("LAPTOP HP CELERON N4000 STREAM 11 PRO G5", 81000, 2, 4, 0, "Laptops", "Laptop-hp.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-
 productos.push(new Producto("PROCESADOR INTEL CORE I9 12900K 3.2GHZ - 30MB | 1700 | S/COOLER", 227880, 3, 5, 0, "Procesadores", "CPU-I9-12900K.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 productos.push(new Producto("PROCESADOR AMD RYZEN 7 4750G 3.6GHZ, 8MB, 8 NUCLEOS, RADEON GRAPHICS, OEM C/COOLER", 93600, 7, 6, 0, "Procesadores", "CPU-I9-12900K.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-
 productos.push(new Producto("PC INTEL I7 11700F B560M TRX 3060/12GB DDR4 16GB(2X8)/3200 SSD KINGSTON 500GB HDD SEAGATE 2TB", 506520, 2, 7, 0, "Desktop", "Desktop-i7-11700f.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 productos.push(new Producto("PC AMD 3PRO 4350G A520M-HVS DDR4 8GB/2666 SSD 480GB", 146700, 0, 8, 0, "Desktop", "Desktop-ryzen-3.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-
 productos.push(new Producto("TARJETA DE VIDEO MSI VENTUS 3X OC RTX 4080 16GB GDDR6X GEFORCE NVIDIA 256 BITS", 523800, 3, 9, 0, "Tarjetas de Video", "GPU-RTX-4080.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 productos.push(new Producto("TARJETA DE VIDEO GALAX SG RTX 3090 OC 24GB GDDR6X GEFORCE NVIDIA 384 BITS", 814680, 2, 10, 0, "Tarjetas de Video", "GPU-RTX-3090.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 productos.push(new Producto("TARJETA DE VIDEO GIGABYTE RADEON XTREME WATERFORCE RX 6900 XT,16GB GDDR6 256 BITS", 953640, 3, 11, 0, "Tarjetas de Video", "GPU-Radeon-RX-6900-XT.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-
 productos.push(new Producto("TECLADO LOGITECH GAMING MECANICO G413", 27360, 3, 12, 0, "Teclados", "teclado-logitech-g413.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 productos.push(new Producto("TECLADO GENIUS ALAMBRICO KB-117", 3420, 3, 13, 0, "Teclados", "teclado-genius.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-
 productos.push(new Producto("MOUSE LOGITECH M110, SENSOR HASTA 1000 DPI", 2880, 3, 14, 0, "Mouse", "mouse-logitech.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 productos.push(new Producto("MOUSE LOGITECH G403 HERO GAMING, SENSOR HASTA 16000 DPI", 18360, 3, 15, 0, "Mouse", "mouse-logitech-g403.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
 
-// Sortear render de los productos en la pagina principal por categoria A-Z
+//Sortear render de los productos en la pagina principal por categoria A-Z
 productos = productos.sort((a, b) => (a.categoria > b.categoria) ? 1 : ((b.categoria > a.categoria) ? -1 : 0))
 
-// Array del carrito
+//Array del carrito
 let carrito = [];
 
-// Guardar carrito en el localStorage
+//Carrito en el localStorage
 const carritoStorage = localStorage.getItem("carrito")
 if (carritoStorage) {
     carrito = JSON.parse(carritoStorage);
@@ -66,7 +61,6 @@ if (carritoStorage) {
 
 //Render de las cards de productos en el HTML
 const catalogoDeProductos = document.getElementById("catalogoDeProductos");
-
 function renderizarProductos(productos) {
     catalogoDeProductos.innerHTML = ``
     for (const producto of productos) {
@@ -90,18 +84,14 @@ function renderizarProductos(productos) {
         </button>
         </div>
         </div>
-        `
+            `
         catalogoDeProductos.append(fila);
     }
     botonComprar();
 }
 
-//Inicialización de la página
-renderizarProductos(productos);
-totalProductosCarrito();
-
+//Toastify de cuando se agrega un producto al carrito
 function toastifyProductoAgregado() {
-
     Toastify({
         text: "✓ Producto agregado",
         duration: 500,
@@ -114,20 +104,17 @@ function toastifyProductoAgregado() {
             opacity: "0.9"
         }
     }).showToast();
-
 }
 
 //Boton Comprar
 function botonComprar() {
-    
     const btnCompra = document.querySelectorAll(".botonCompra");
     for (const boton of btnCompra) {
-    
         boton.addEventListener("click", agregarCarrito);
-    
     }
 }
 
+//Función de agregar el carrito
 function agregarCarrito(e) {
     const id = e.target.getAttribute("id");
     //Chequeo si el producto existe
@@ -150,7 +137,6 @@ function agregarCarrito(e) {
             color: "black",
             background: "white"
         });
-
         return
     }
     //Si hay suficiente stock agrega al carrito
@@ -174,14 +160,13 @@ function agregarCarrito(e) {
 }
 
 //Render del Carrito 
-
 function mostrarCarrito(producto) {
     //Rate ARS
     const rate = document.getElementById("rateARS")
     rate.innerHTML =
-    `
+        `
     <span>1 USD = ${rateARS.toFixed(2)} ARS</span>
-    `
+        `
 
     //Creación de la tabla
     const tabla = document.getElementById("tbody");
@@ -221,11 +206,11 @@ function mostrarCarrito(producto) {
     const button = document.createElement("button");
     button.id = `borrar-${producto.id}`
     button.innerHTML =
-    `
+        `
     <svg class="w-5" id=${button.id} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
     <path strokeLinecap="round" strokeLinejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
     </svg>
-    `
+        `
     button.classList.add("bg-primary-color", "hover:bg-green-300", "text-black", "font-bold", "py-2", "px-4", "rounded-full");
     button.addEventListener("click", borrarProducto);
     td5.appendChild(button);
@@ -237,29 +222,31 @@ function mostrarCarrito(producto) {
     fila.appendChild(td4);
     fila.appendChild(td5);
     tabla.append(fila);
+
+    //Renderizando el total de productos agregados al carrito
     totalProductosCarrito();
-    
 }
 
+//Función que calcula la cantidad de productos en el carrito y lo muestra en el navbar
 function totalProductosCarrito() {
     const tabla = document.getElementById("tbody");
     let totalRows = tabla.rows.length
     const totalProductosCarrito = document.getElementById("totalProductosCarrito");
     totalProductosCarrito.innerHTML =
-    `
+        `
     <span class="font-bold text-xl">[${totalRows}]</span>
-    `
+        `
 }
 
 //Borrar Producto del Carrito
 function borrarProducto(e) {
     const id = e.target.getAttribute("id")?.replace("borrar-", "");
-    const fila = document.getElementById(`id-${id}`);    
+    const fila = document.getElementById(`id-${id}`);
     if (fila) {
         carrito = carrito.filter((producto) => producto.id !== parseInt(id));
         fila.remove();
         localStorage.setItem("carrito", JSON.stringify(carrito));
-        calcularTotal(carrito);        
+        calcularTotal(carrito);
         const productoSeleccionado = productos.find((producto) => producto.id === parseInt(id));
         if (productoSeleccionado) {
             productoSeleccionado.cantidad = 0
@@ -276,7 +263,7 @@ moneda.addEventListener("change", () => {
     calcularTotal(carrito);
 });
 
-// Calcular el total del Carrito
+//Calcular el total del Carrito
 function calcularTotal(carrito) {
     //ARS
     if (monedaValue == 1) {
@@ -284,9 +271,12 @@ function calcularTotal(carrito) {
         const totalCarritoARS = carrito.reduce((previous, current) => previous + (current.cantidad * current.precioARS), 0);
         const iva = totalCarritoARS * 0.21
         const total = totalCarritoARS + iva
-        carritoTotal.innerHTML = `Subtotal: ${totalCarritoARS.toFixed(2)} ${monedaText} <br>
-                              IVA (21%): ${iva.toFixed(2)} ${monedaText} <br>
-                              Total: ${total.toFixed(2)} ${monedaText}`
+        carritoTotal.innerHTML =
+            `
+        Subtotal: ${totalCarritoARS.toFixed(2)} ${monedaText} <br>
+        IVA (21%): ${iva.toFixed(2)} ${monedaText} <br>
+        Total: ${total.toFixed(2)} ${monedaText}
+            `
     }
     //USD
     if (monedaValue == 2) {
@@ -294,14 +284,16 @@ function calcularTotal(carrito) {
         const totalCarritoUSD = carrito.reduce((previous, current) => previous + (current.cantidad * current.precioUSD), 0);
         const iva = totalCarritoUSD * 0.21
         const total = totalCarritoUSD + iva
-        carritoTotal.innerHTML = `Subtotal en ${monedaText}: ${totalCarritoUSD.toFixed(2)} ${monedaText} <br>
-                                  IVA (21%): ${iva.toFixed(2)} ${monedaText} <br>
-                                  Total: ${total.toFixed(2)} ${monedaText}`
+        carritoTotal.innerHTML =
+            `
+        Subtotal en ${monedaText}: ${totalCarritoUSD.toFixed(2)} ${monedaText} <br>
+        IVA (21%): ${iva.toFixed(2)} ${monedaText} <br>
+        Total: ${total.toFixed(2)} ${monedaText}
+            `
     }
 }
 
 //Boton de Pagar
-
 const btnPagar = document.getElementById("botonPagar");
 btnPagar.addEventListener('click', () => {
     let total = document.getElementById("carritoTotal").innerText;
@@ -311,7 +303,7 @@ btnPagar.addEventListener('click', () => {
     }
     //Si hay total a pagar el boton procede a hacer esto:
     document.body.innerHTML =
-    `
+        `
     <div class="text-center">
     <h1>Carlos Duarte Medina - Entrega Final</h1>
     <h2>Coderhouse - JS39415</h2><br>
@@ -320,20 +312,19 @@ btnPagar.addEventListener('click', () => {
     <a href="index.html">Volver a la tienda</a>
     </div>
     </div>
-    `
+        `
     localStorage.clear();
 });
 
 //Filtrar por categorias
-
 const menuItems = document.getElementsByClassName('menuItem')
-
 for (const menuItem of menuItems) {
-
     menuItem.addEventListener("click", (e) => {
         let categoria = productos.filter((producto) => producto.categoria === e.target.innerText);
         renderizarProductos(categoria);
     });
 }
 
-
+//Inicialización de la página
+renderizarProductos(productos);
+totalProductosCarrito();
