@@ -9,15 +9,15 @@ let monedaText = "ARS"
 
 //Class y métodos
 class Producto {
-    constructor(nombre, precioARS, stock, id, cantidad, categoria, img1, descripcion) {
+    constructor(nombre, precioARS, stock, id, categoria, img1, descripcion) {
         this.nombre = nombre;
         this.precioARS = precioARS;
         this.stock = stock;
         this.id = id;
-        this.cantidad = cantidad; // Cantidad en Carrito por default
         this.categoria = categoria
         this.img1 = img1
         this.descripcion = descripcion
+        this.cantidad = 0; // Cantidad en Carrito por default
         this.precioUSD = (precioARS / rateARS);
     }
 }
@@ -27,21 +27,23 @@ let productos = [];
 
 //Productos ingresados al sistema por el administrador
 
-productos.push(new Producto("LAPTOP HYUNDAI CELERON N4020 HYBOOK", 126000, 7, 1, 0, "Laptops", "Laptop-hyundai.jpeg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("LAPTOP ACER CELERON N4020 TRAVELMATE B3", 77700, 3, 2, 0, "Laptops", "Laptop-acer.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("LAPTOP TECLAST CORE I3 1005G1 TB04 F15 PRO", 145800, 0, 3, 0, "Laptops", "Laptop-tbolt.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("LAPTOP HP CELERON N4000 STREAM 11 PRO G5", 81000, 2, 4, 0, "Laptops", "Laptop-hp.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("PROCESADOR INTEL CORE I9 12900K 3.2GHZ - 30MB | 1700 | S/COOLER", 227880, 3, 5, 0, "Procesadores", "CPU-I9-12900K.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("PROCESADOR AMD RYZEN 7 4750G 3.6GHZ, 8MB, 8 NUCLEOS, RADEON GRAPHICS, OEM C/COOLER", 93600, 7, 6, 0, "Procesadores", "CPU-Ryzen-7-4750G.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("PC INTEL I7 11700F B560M TRX 3060/12GB DDR4 16GB(2X8)/3200 SSD KINGSTON 500GB HDD SEAGATE 2TB", 506520, 2, 7, 0, "Desktop", "Desktop-i7-11700f.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("PC AMD 3PRO 4350G A520M-HVS DDR4 8GB/2666 SSD 480GB", 146700, 0, 8, 0, "Desktop", "Desktop-ryzen-3.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("TARJETA DE VIDEO MSI VENTUS 3X OC RTX 4080 16GB GDDR6X GEFORCE NVIDIA 256 BITS", 523800, 3, 9, 0, "Tarjetas de Video", "GPU-RTX-4080.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("TARJETA DE VIDEO GALAX SG RTX 3090 OC 24GB GDDR6X GEFORCE NVIDIA 384 BITS", 814680, 2, 10, 0, "Tarjetas de Video", "GPU-RTX-3090.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("TARJETA DE VIDEO GIGABYTE RADEON XTREME WATERFORCE RX 6900 XT,16GB GDDR6 256 BITS", 953640, 3, 11, 0, "Tarjetas de Video", "GPU-Radeon-RX-6900-XT.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("TECLADO LOGITECH GAMING MECANICO G413", 27360, 3, 12, 0, "Teclados", "teclado-logitech-g413.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("TECLADO GENIUS ALAMBRICO KB-117", 3420, 3, 13, 0, "Teclados", "teclado-genius.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("MOUSE LOGITECH M110, SENSOR HASTA 1000 DPI", 2880, 3, 14, 0, "Mouse", "mouse-logitech.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
-productos.push(new Producto("MOUSE LOGITECH G403 HERO GAMING, SENSOR HASTA 16000 DPI", 18360, 3, 15, 0, "Mouse", "mouse-logitech-g403.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+function productosPush() {
+productos.push(new Producto("LAPTOP HYUNDAI CELERON N4020 HYBOOK", 126000, 7, 1, "Laptops", "Laptop-hyundai.jpeg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP ACER CELERON N4020 TRAVELMATE B3", 77700, 3, 2, "Laptops", "Laptop-acer.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP TECLAST CORE I3 1005G1 TB04 F15 PRO", 145800, 0, 3, "Laptops", "Laptop-tbolt.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("LAPTOP HP CELERON N4000 STREAM 11 PRO G5", 81000, 2, 4, "Laptops", "Laptop-hp.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PROCESADOR INTEL CORE I9 12900K 3.2GHZ - 30MB | 1700 | S/COOLER", 227880, 3, 5, "Procesadores", "CPU-I9-12900K.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PROCESADOR AMD RYZEN 7 4750G 3.6GHZ, 8MB, 8 NUCLEOS, RADEON GRAPHICS, OEM C/COOLER", 93600, 7, 6, "Procesadores", "CPU-Ryzen-7-4750G.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PC INTEL I7 11700F B560M TRX 3060/12GB DDR4 16GB(2X8)/3200 SSD KINGSTON 500GB HDD SEAGATE 2TB", 506520, 2, 7, "Desktop", "Desktop-i7-11700f.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("PC AMD 3PRO 4350G A520M-HVS DDR4 8GB/2666 SSD 480GB", 146700, 0, 8, "Desktop", "Desktop-ryzen-3.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TARJETA DE VIDEO MSI VENTUS 3X OC RTX 4080 16GB GDDR6X GEFORCE NVIDIA 256 BITS", 523800, 3, 9, "Tarjetas de Video", "GPU-RTX-4080.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TARJETA DE VIDEO GALAX SG RTX 3090 OC 24GB GDDR6X GEFORCE NVIDIA 384 BITS", 814680, 2, 10, "Tarjetas de Video", "GPU-RTX-3090.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TARJETA DE VIDEO GIGABYTE RADEON XTREME WATERFORCE RX 6900 XT,16GB GDDR6 256 BITS", 953640, 3, 11, "Tarjetas de Video", "GPU-Radeon-RX-6900-XT.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TECLADO LOGITECH GAMING MECANICO G413", 27360, 3, 12, "Teclados", "teclado-logitech-g413.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("TECLADO GENIUS ALAMBRICO KB-117", 3420, 3, 13, "Teclados", "teclado-genius.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("MOUSE LOGITECH M110, SENSOR HASTA 1000 DPI", 2880, 3, 14, "Mouse", "mouse-logitech.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+productos.push(new Producto("MOUSE LOGITECH G403 HERO GAMING, SENSOR HASTA 16000 DPI", 18360, 3, 15, "Mouse", "mouse-logitech-g403.jpg", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."));
+}
 
 //Sortear render de los productos en la pagina principal por categoria A-Z
 productos = productos.sort((a, b) => (a.categoria > b.categoria) ? 1 : ((b.categoria > a.categoria) ? -1 : 0))
@@ -342,8 +344,8 @@ for (const menuItem of menuItems) {
 }
 
 //Borar todos los productos
-const btnBorrarTodo = document.getElementById("borrarTodoElCarrito");
-btnBorrarTodo.addEventListener("click", swalBorrarTodo);
+const btnBorrarTodoElCarrito = document.getElementById("borrarTodoElCarrito");
+btnBorrarTodoElCarrito.addEventListener("click", swalBorrarTodoElCarrito);
 function borrarTodosLosProductos() {
     const tabla = document.getElementById("tbody");
     tabla.innerHTML = ''
@@ -351,10 +353,12 @@ function borrarTodosLosProductos() {
     totalProductosCarrito();
     calcularTotal(carrito);
     localStorage.clear();
+    productos = [];
+    productosPush();
 }
 
 //Alerta Sweet Alert 2 de cuando se quiere borrar todo del carrito
-async function swalBorrarTodo() {
+async function swalBorrarTodoElCarrito() {
     const resultado = await Swal.fire({
         text: "Seguro que quiere borrar todos los productos del carrito?",
         icon: "warning",
@@ -377,5 +381,6 @@ async function swalBorrarTodo() {
 }
 
 //Inicialización de la página
+productosPush();
 renderizarProductos(productos);
 totalProductosCarrito();
