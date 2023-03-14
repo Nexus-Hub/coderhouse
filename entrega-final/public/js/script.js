@@ -236,10 +236,15 @@ function totalProductosCarrito() {
     const tabla = document.getElementById("tbody");
     let totalRows = tabla.rows.length
     const totalProductosCarrito = document.getElementById("totalProductosCarrito");
-    totalProductosCarrito.innerHTML =
-        `
-    <span class="font-bold text-xl">[${totalRows}]</span>
-        `
+    if (totalRows === 0) {
+        
+        totalProductosCarrito.classList.add("hidden")
+
+    } else {
+        
+        totalProductosCarrito.classList.remove("hidden")
+        totalProductosCarrito.innerText = totalRows
+    }
 }
 
 //Borrar Producto del Carrito
