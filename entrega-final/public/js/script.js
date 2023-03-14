@@ -106,6 +106,23 @@ function toastifyProductoAgregado() {
     }).showToast();
 }
 
+//Alerta Sweet Alert 2 de cuando no hay stock
+function noStockAlert() {
+    Swal.fire({
+        title: "SIN STOCK",
+        text: "El producto no se agregó al carrito, no hay stock disponible para comprar",
+        icon: "error",
+        showClass: {
+            popup: "animate__animated animate__zoomIn"
+        },
+        hideClass: {
+            popup: "animate__animated animate__zoomOut"
+        },
+        color: "black",
+        background: "white"
+    });    
+}
+
 //Boton Comprar
 function botonComprar() {
     const btnCompra = document.querySelectorAll(".botonCompra");
@@ -123,20 +140,7 @@ function agregarCarrito(e) {
     const productoExistente = carrito.find((producto) => producto.id === productoSeleccionado.id);
     //Si el stock está en 0 no agrega el producto al carrito
     if (productoSeleccionado.stock === 0) {
-        Swal.fire({
-
-            title: "SIN STOCK",
-            text: "El producto no se agregó al carrito, no hay stock disponible para comprar",
-            icon: "error",
-            showClass: {
-                popup: "animate__animated animate__zoomIn"
-            },
-            hideClass: {
-                popup: "animate__animated animate__zoomOut"
-            },
-            color: "black",
-            background: "white"
-        });
+        noStockAlert();
         return
     }
     //Si hay suficiente stock agrega al carrito
