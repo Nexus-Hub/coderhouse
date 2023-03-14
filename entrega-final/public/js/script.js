@@ -104,7 +104,7 @@ function toastifyProductoAgregado() {
 
     Toastify({
         text: "✓ Producto agregado",
-        duration: 800,
+        duration: 500,
         gravity: "bottom",
         position: "center",
         style: {
