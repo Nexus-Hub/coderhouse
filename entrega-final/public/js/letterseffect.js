@@ -1,21 +1,21 @@
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let interval = null;
 
-lettersEffect = document.getElementsByClassName("lettersEffect")
+lettersEffect = document.getElementsByClassName('lettersEffect')
 for (const letterEffect of lettersEffect) {
-    letterEffect.addEventListener("mouseover", (event) => {
+    letterEffect.addEventListener('mouseover', (event) => {
         let iteration = 0;
         clearInterval(interval);
         interval = setInterval(() => {
             event.target.innerText = event.target.innerText
-                .split("")
+                .split('')
                 .map((letter, index) => {
                     if (index < iteration) {
                         return event.target.dataset.value[index];
                     }
                     return letters[Math.floor(Math.random() * 26)]
                 })
-                .join("");
+                .join('');
             if (iteration >= event.target.dataset.value.length) {
                 clearInterval(interval);
             }
