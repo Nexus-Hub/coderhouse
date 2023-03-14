@@ -541,8 +541,16 @@ video {
   bottom: 0.75rem;
 }
 
+.right-16 {
+  right: 4rem;
+}
+
 .right-2 {
   right: 0.5rem;
+}
+
+.right-24 {
+  right: 6rem;
 }
 
 .right-3 {
@@ -553,60 +561,12 @@ video {
   top: 0px;
 }
 
-.top-2 {
-  top: 0.5rem;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.right-5 {
-  right: 1.25rem;
-}
-
-.right-10 {
-  right: 2.5rem;
-}
-
-.right-12 {
-  right: 3rem;
-}
-
-.top-3 {
-  top: 0.75rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
 .top-1 {
   top: 0.25rem;
 }
 
-.right-8 {
-  right: 2rem;
-}
-
-.right-20 {
-  right: 5rem;
-}
-
-.right-7 {
-  right: 1.75rem;
-}
-
-.right-6 {
-  right: 1.5rem;
-}
-
-.right-24 {
-  right: 6rem;
-}
-
-.right-16 {
-  right: 4rem;
+.top-2 {
+  top: 0.5rem;
 }
 
 .mx-auto {
@@ -637,10 +597,6 @@ video {
 
 .ml-auto {
   margin-left: auto;
-}
-
-.mr-10 {
-  margin-right: 2.5rem;
 }
 
 .mr-2 {
@@ -911,6 +867,11 @@ video {
   background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -1031,11 +992,6 @@ video {
   line-height: 1rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1080,6 +1036,10 @@ video {
   text-decoration-line: underline;
 }
 
+.underline-offset-2 {
+  text-underline-offset: 2px;
+}
+
 .underline-offset-8 {
   text-underline-offset: 8px;
 }
@@ -1088,20 +1048,8 @@ video {
   opacity: 0.7;
 }
 
-.opacity-5 {
-  opacity: 0.05;
-}
-
 .opacity-50 {
   opacity: 0.5;
-}
-
-.opacity-90 {
-  opacity: 0.9;
-}
-
-.opacity-80 {
-  opacity: 0.8;
 }
 
 .shadow-lg {
@@ -1165,12 +1113,21 @@ video {
   background-color: rgb(134 239 172 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-red-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
 .hover\:fill-green-700:hover {
   fill: #15803d;
 }
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
@@ -1223,20 +1180,12 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:right-6 {
-    right: 1.5rem;
-  }
-
   .lg\:right-12 {
     right: 3rem;
   }
 
-  .lg\:right-7 {
-    right: 1.75rem;
-  }
-
-  .lg\:right-8 {
-    right: 2rem;
+  .lg\:right-6 {
+    right: 1.5rem;
   }
 
   .lg\:my-8 {

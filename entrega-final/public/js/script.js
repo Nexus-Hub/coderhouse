@@ -236,15 +236,22 @@ function totalProductosCarrito() {
     const tabla = document.getElementById("tbody");
     let totalRows = tabla.rows.length
     const totalProductosCarrito = document.getElementById("totalProductosCarrito");
+    const btnBorrarTodo = document.getElementById("borrarTodoElCarrito");
     if (totalRows === 0) {
         
-        totalProductosCarrito.classList.add("hidden")
-
+        totalProductosCarrito.classList.add("hidden");
+        btnBorrarTodo.classList.add("hidden");
+        
     } else {
         
-        totalProductosCarrito.classList.remove("hidden")
+        totalProductosCarrito.classList.remove("hidden");
         totalProductosCarrito.innerText = totalRows
     }
+
+    if (totalRows > 1) {
+        btnBorrarTodo.classList.remove("hidden");
+    }      
+    
 }
 
 //Borrar Producto del Carrito
@@ -329,9 +336,44 @@ btnPagar.addEventListener('click', () => {
 const menuItems = document.getElementsByClassName('menuItem')
 for (const menuItem of menuItems) {
     menuItem.addEventListener("click", (e) => {
-        let categoria = productos.filter((producto) => producto.categoria === e.target.innerText);
+        let categoria = productos.filter((producto) => (producto.categoria).toUpperCase() === e.target.innerText);
         renderizarProductos(categoria);
     });
+}
+
+//Borar todos los productos
+const btnBorrarTodo = document.getElementById("borrarTodoElCarrito");
+btnBorrarTodo.addEventListener("click", swalBorrarTodo);
+function borrarTodosLosProductos() {
+    const tabla = document.getElementById("tbody");
+    tabla.innerHTML = ''
+    carrito = [];
+    totalProductosCarrito();
+    calcularTotal(carrito);
+    localStorage.clear();
+}
+
+//Alerta Sweet Alert 2 de cuando se quiere borrar todo del carrito
+async function swalBorrarTodo() {
+    const resultado = await Swal.fire({
+        text: "Seguro que quiere limpiar todos los productos del carrito?",
+        icon: "warning",
+        showDenyButton: true,
+        confirmButtonColor: '#087325',
+        confirmButtonText: `Sí`,
+        denyButtonText: `No`,
+        showClass: {
+            popup: "animate__animated animate__zoomIn"
+        },
+        hideClass: {
+            popup: "animate__animated animate__zoomOut"
+        },
+        color: "black",
+        background: "white"
+    });
+    if (resultado.isConfirmed) {
+        borrarTodosLosProductos();
+    } 
 }
 
 //Inicialización de la página
