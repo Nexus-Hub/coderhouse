@@ -14,9 +14,9 @@ class Producto {
         this.precioARS = precioARS;
         this.stock = stock;
         this.id = id;
-        this.categoria = categoria
-        this.img1 = img1
-        this.descripcion = descripcion
+        this.categoria = categoria;
+        this.img1 = img1;
+        this.descripcion = descripcion;
         this.cantidad = 0; // Cantidad en Carrito por default
         this.precioUSD = (precioARS / rateARS);
     }
